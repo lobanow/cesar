@@ -1,6 +1,8 @@
 
-b = input('b = ')
+b = input('ввести фразу:')
 a=''
+
+print("зашифровано")
 for i in range(len(b)):
     if(b[i]=="a"):
         a=a+"b"
@@ -57,6 +59,67 @@ for i in range(len(b)):
     elif(b[i]==" "):
         a=a+" "
         
+    
 print(a)
+print("дешифровка")
 
+a=''
+
+for i in range(len(b)):
+    if(b[i]=="a"):
+        a=a+"z"
+    elif(b[i]=="b"):
+        a=a+"a"
+    elif(b[i]=="c"):
+        a=a+"b"
+    elif(b[i]=="d"):
+        a=a+"c"
+    elif(b[i]=="e"):
+        a=a+"d"
+    elif(b[i]=="f"):
+        a=a+"e"
+    elif(b[i]=="g"):
+        a=a+"f"
+    elif(b[i]=="h"):
+        a=a+"g"
+    elif(b[i]=="i"):
+        a=a+"h"
+    elif(b[i]=="j"):
+        a=a+"i"
+    elif(b[i]=="k"):
+        a=a+"j"
+    elif(b[i]=="l"):
+        a=a+"k"
+    elif(b[i]=="m"):
+        a=a+"l"
+    elif(b[i]=="n"):
+        a=a+"m"
+    elif(b[i]=="o"):
+        a=a+"n"
+    elif(b[i]=="p"):
+        a=a+"o"
+    elif(b[i]=="q"):
+        a=a+"p"
+    elif(b[i]=="r"):
+        a=a+"q"
+    elif(b[i]=="s"):
+        a=a+"r"
+    elif(b[i]=="t"):
+        a=a+"s"
+    elif(b[i]=="u"):
+        a=a+"t"
+    elif(b[i]=="v"):
+        a=a+"u"
+    elif(b[i]=="w"):
+        a=a+"v"
+    elif(b[i]=="x"):
+        a=a+"w"
+    elif(b[i]=="y"):
+        a=a+"x"
+    elif(b[i]=="z"):
+        a=a+"y"
+    elif(b[i]==" "):
+        a=a+" "
+
+print(a)
 c=input()
