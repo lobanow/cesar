@@ -1,9 +1,8 @@
-
 b = input('ввести фразу:')
 a=''
 
-print("зашифровано")
-for i in range(len(b)):
+
+for i in range(len(b)): 
     if(b[i]=="a"):
         a=a+"b"
     elif(b[i]=="b"):
@@ -58,9 +57,12 @@ for i in range(len(b)):
         a=a+"a"
     elif(b[i]==" "):
         a=a+" "
-        
-    
-print(a)
+    else:
+        print("ошибка ввода (используйте латиницу и пробел)") 
+        a="ошибка"
+        break
+print("\nзашифровано")
+print(a, "\n")
 print("дешифровка")
 
 a=''
@@ -120,6 +122,9 @@ for i in range(len(b)):
         a=a+"y"
     elif(b[i]==" "):
         a=a+" "
+    else:
+        a="ошибка"
+        break
 
-print(a)
+print(a) 
 c=input()
