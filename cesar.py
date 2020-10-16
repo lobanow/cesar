@@ -1,130 +1,61 @@
+key=100#ключ для первичного вызова
+
+
 b = input('ввести фразу:')#Ввод фразы
-a=''
 
+b=b.lower()
+while(key>26 or key<0):#контроль приемлимости ключа
+    print("введите смещение от 0 до 26")
+    key = int(input('ввести ключ:'))#Ввод ключа
 
-for i in range(len(b)): #замена буквы на идущую после
-    if(b[i]=="a"):
-        a=a+"b"
-    elif(b[i]=="b"):
-        a=a+"c"
-    elif(b[i]=="c"):
-        a=a+"d"
-    elif(b[i]=="d"):
-        a=a+"e"
-    elif(b[i]=="e"):
-        a=a+"f"
-    elif(b[i]=="f"):
-        a=a+"g"
-    elif(b[i]=="g"):
-        a=a+"h"
-    elif(b[i]=="h"):
-        a=a+"i"
-    elif(b[i]=="i"):
-        a=a+"j"
-    elif(b[i]=="j"):
-        a=a+"k"
-    elif(b[i]=="k"):
-        a=a+"l"
-    elif(b[i]=="l"):
-        a=a+"m"
-    elif(b[i]=="m"):
-        a=a+"n"
-    elif(b[i]=="n"):
-        a=a+"o"
-    elif(b[i]=="o"):
-        a=a+"p"
-    elif(b[i]=="p"):
-        a=a+"q"
-    elif(b[i]=="q"):
-        a=a+"r"
-    elif(b[i]=="r"):
-        a=a+"s"
-    elif(b[i]=="s"):
-        a=a+"t"
-    elif(b[i]=="t"):
-        a=a+"u"
-    elif(b[i]=="u"):
-        a=a+"v"
-    elif(b[i]=="v"):
-        a=a+"w"
-    elif(b[i]=="w"):
-        a=a+"x"
-    elif(b[i]=="x"):
-        a=a+"y"
-    elif(b[i]=="y"):
-        a=a+"z"
-    elif(b[i]=="z"):
-        a=a+"a"
-    elif(b[i]==" "):
-        a=a+" "
-    else:
+a=[]
+ctrl=0#контроль ввода сивола
+alph = "abcdefghijklmnopqrstuvwxyz"
+alph1 = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"#второй алфавит для смещения
+
+for i in range(len(b)): #перевод фразы в цифры
+    a+=[0]
+
+    for j in range(len(alph)-1):
+
+        if (b[i]==alph[j]):
+            a[i]=j
+            ctrl=1
+        elif (b[i]==" "):
+            a[i]=" "
+            ctrl=1
+        
+
+    if(ctrl!=1):
         print("используйте латиницу и пробел") #Вывод ошибки при неизветном символе
-        a="ошибка"
+        a[0]=404
         break
-print("\nзашифровано")
-print(a, "\n")#Вывод текста зашифрованного
-print("дешифровка")
-
-a=''
-
-for i in range(len(b)): #замена буквы на идущую перед
-    if(b[i]=="a"):
-        a=a+"z"
-    elif(b[i]=="b"):
-        a=a+"a"
-    elif(b[i]=="c"):
-        a=a+"b"
-    elif(b[i]=="d"):
-        a=a+"c"
-    elif(b[i]=="e"):
-        a=a+"d"
-    elif(b[i]=="f"):
-        a=a+"e"
-    elif(b[i]=="g"):
-        a=a+"f"
-    elif(b[i]=="h"):
-        a=a+"g"
-    elif(b[i]=="i"):
-        a=a+"h"
-    elif(b[i]=="j"):
-        a=a+"i"
-    elif(b[i]=="k"):
-        a=a+"j"
-    elif(b[i]=="l"):
-        a=a+"k"
-    elif(b[i]=="m"):
-        a=a+"l"
-    elif(b[i]=="n"):
-        a=a+"m"
-    elif(b[i]=="o"):
-        a=a+"n"
-    elif(b[i]=="p"):
-        a=a+"o"
-    elif(b[i]=="q"):
-        a=a+"p"
-    elif(b[i]=="r"):
-        a=a+"q"
-    elif(b[i]=="s"):
-        a=a+"r"
-    elif(b[i]=="t"):
-        a=a+"s"
-    elif(b[i]=="u"):
-        a=a+"t"
-    elif(b[i]=="v"):
-        a=a+"u"
-    elif(b[i]=="w"):
-        a=a+"v"
-    elif(b[i]=="x"):
-        a=a+"w"
-    elif(b[i]=="y"):
-        a=a+"x"
-    elif(b[i]=="z"):
-        a=a+"y"
-    elif(b[i]==" "):
-        a=a+" "
+    ctrl=0
+    
+    
+out=""
+print("зашифровано ")
+for i in range(len(b)): #смещение+
+    if (a[i]==" "):
+        out+=" "
+    elif (a[i]==404):
+        print("ошибка")
+        break
     else:
-        a="ошибка"#Вывод ошибки при неизветном символе
-        break
+        out+=alph1[a[i]+key]#вывод текста
+print(out)
 
-print(a) #Вывод текста расшифрованного
+
+out=""
+print("дешифровано ")
+for i in range(len(b)): #смещение -
+    if (a[i]==" "):
+        out+=" "
+    elif (a[i]==404):
+        print("ошибка")
+        break
+    else:
+        out+=alph1[a[i]+26-key]#вывод текста
+print(out)
+
 c=input()#Заглушка, чтобы не закрывалось
