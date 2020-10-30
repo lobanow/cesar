@@ -1,0 +1,63 @@
+INFO:root:Program started
+INFO:root:Ввод фразы hello
+INFO:root:Ввод ключа 0
+INFO:root:Кодирование символа h
+INFO:root:Кодирование символа e
+INFO:root:Кодирование символа l
+INFO:root:Кодирование символа l
+INFO:root:Кодирование символа o
+INFO:root:Вывод символа h
+INFO:root:Вывод символа e
+INFO:root:Вывод символа l
+INFO:root:Вывод символа l
+INFO:root:Вывод символа o
+INFO:root:Вывод фразы hello
+INFO:root:Вывод символа h
+INFO:root:Вывод символа e
+INFO:root:Вывод символа l
+INFO:root:Вывод символа l
+INFO:root:Вывод символа o
+INFO:root:Вывод фразы hello
+INFO:root:Program started
+INFO:root:Ввод фразы Work
+INFO:root:Ввод ключа 1
+INFO:root:Кодирование символа w
+INFO:root:Кодирование символа o
+INFO:root:Кодирование символа r
+INFO:root:Кодирование символа k
+INFO:root:Вывод символа x
+INFO:root:Вывод символа p
+INFO:root:Вывод символа s
+INFO:root:Вывод символа l
+INFO:root:Вывод фразы xpsl
+INFO:root:Вывод символа v
+INFO:root:Вывод символа n
+INFO:root:Вывод символа q
+INFO:root:Вывод символа j
+INFO:root:Вывод фразы vnqj
+INFO:root:Program started
+INFO:root:Ввод фразы Привет
+INFO:root:Ввод ключа 0
+INFO:root:Кодирование символа п
+ERROR:root:Неизвестный символ
+INFO:root:Вывод фразы 
+INFO:root:Вывод фразы 
+INFO:root:Program started
+INFO:root:Ввод фразы hi
+INFO:root:Ввод ключа 1111
+ERROR:root:Неверный ключ
+INFO:root:Ввод ключа 1111
+ERROR:root:Неверный ключ
+INFO:root:Ввод ключа 1111
+ERROR:root:Неверный ключ
+INFO:root:Ввод ключа 1111
+ERROR:root:Неверный ключ
+INFO:root:Ввод ключа 0
+INFO:root:Кодирование символа h
+INFO:root:Кодирование символа i
+INFO:root:Вывод символа h
+INFO:root:Вывод символа i
+INFO:root:Вывод фразы hi
+INFO:root:Вывод символа h
+INFO:root:Вывод символа i
+INFO:root:Вывод фразы hi
